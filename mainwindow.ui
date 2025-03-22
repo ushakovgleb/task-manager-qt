@@ -13,24 +13,18 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(207, 210, 255)
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableView" name="tableView">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>80</y>
-      <width>191</width>
-      <height>231</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
       <x>300</x>
       <y>0</y>
-      <width>1300</width>
-      <height>830</height>
+      <width>1621</width>
+      <height>831</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -40,6 +34,643 @@
      <attribute name="title">
       <string>Календарь</string>
      </attribute>
+     <widget class="QPushButton" name="monday1">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>30</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="tuesday1">
+      <property name="geometry">
+       <rect>
+        <x>185</x>
+        <y>30</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="wednesday1">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>30</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="thursday1">
+      <property name="geometry">
+       <rect>
+        <x>555</x>
+        <y>30</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="sunday1">
+      <property name="geometry">
+       <rect>
+        <x>1110</x>
+        <y>30</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saturday1">
+      <property name="geometry">
+       <rect>
+        <x>925</x>
+        <y>30</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="friday1">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>30</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="sunday2">
+      <property name="geometry">
+       <rect>
+        <x>1110</x>
+        <y>140</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="tuesday2">
+      <property name="geometry">
+       <rect>
+        <x>185</x>
+        <y>140</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saturday2">
+      <property name="geometry">
+       <rect>
+        <x>925</x>
+        <y>140</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="monday2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>140</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="friday2">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>140</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="thursday2">
+      <property name="geometry">
+       <rect>
+        <x>555</x>
+        <y>140</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="wednesday2">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>140</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="sunday4">
+      <property name="geometry">
+       <rect>
+        <x>1110</x>
+        <y>364</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="friday3">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>250</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="tuesday4">
+      <property name="geometry">
+       <rect>
+        <x>185</x>
+        <y>364</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saturday4">
+      <property name="geometry">
+       <rect>
+        <x>925</x>
+        <y>364</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="monday4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>364</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saturday3">
+      <property name="geometry">
+       <rect>
+        <x>925</x>
+        <y>250</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="thursday4">
+      <property name="geometry">
+       <rect>
+        <x>555</x>
+        <y>364</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="friday4">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>364</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="thursday3">
+      <property name="geometry">
+       <rect>
+        <x>555</x>
+        <y>250</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="wednesday3">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>250</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="monday3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>250</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="tuesday3">
+      <property name="geometry">
+       <rect>
+        <x>185</x>
+        <y>250</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="sunday3">
+      <property name="geometry">
+       <rect>
+        <x>1110</x>
+        <y>250</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="wednesday4">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>364</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="monday_label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>185</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>пн</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="tuesday_lebel">
+      <property name="geometry">
+       <rect>
+        <x>185</x>
+        <y>0</y>
+        <width>185</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>вт</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="thursday_label">
+      <property name="geometry">
+       <rect>
+        <x>555</x>
+        <y>0</y>
+        <width>185</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>чт</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="wednesday_label">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>0</y>
+        <width>185</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ср</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="sunday_lebel">
+      <property name="geometry">
+       <rect>
+        <x>1110</x>
+        <y>0</y>
+        <width>185</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>вс</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="friday_label">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>0</y>
+        <width>185</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>пт</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="saturday_label">
+      <property name="geometry">
+       <rect>
+        <x>925</x>
+        <y>0</y>
+        <width>185</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>сб</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="thursday5">
+      <property name="geometry">
+       <rect>
+        <x>555</x>
+        <y>478</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="tuesday5">
+      <property name="geometry">
+       <rect>
+        <x>185</x>
+        <y>478</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="friday5">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>478</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="monday5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>478</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="sunday5">
+      <property name="geometry">
+       <rect>
+        <x>1110</x>
+        <y>478</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="wednesday5">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>478</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saturday5">
+      <property name="geometry">
+       <rect>
+        <x>925</x>
+        <y>478</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="sunday6">
+      <property name="geometry">
+       <rect>
+        <x>1110</x>
+        <y>592</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saturday6">
+      <property name="geometry">
+       <rect>
+        <x>925</x>
+        <y>592</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="friday6">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>592</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="tuesday6">
+      <property name="geometry">
+       <rect>
+        <x>185</x>
+        <y>592</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="thursday6">
+      <property name="geometry">
+       <rect>
+        <x>555</x>
+        <y>592</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="wednesday6">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>592</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="monday6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>592</y>
+        <width>185</width>
+        <height>114</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -55,6 +686,16 @@
      <attribute name="title">
       <string>Страница 4</string>
      </attribute>
+     <widget class="QTableView" name="tableView">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>120</y>
+        <width>191</width>
+        <height>114</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>

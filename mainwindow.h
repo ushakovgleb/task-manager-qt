@@ -7,7 +7,6 @@
 #include <QSqlQuery>
 #include <QSqlTableModel>
 
-
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -23,9 +22,7 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
-
-    void on_pushButton_2_clicked();
+    void clicked_on_date();
 
 private:
     Ui::MainWindow *ui;
