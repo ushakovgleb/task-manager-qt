@@ -1,5 +1,5 @@
-#include "miniwindow.h"
-#include "ui_miniwindow.h"
+#include "create_task.h"
+#include "ui_create_task.h"
 
 MiniWindow::MiniWindow(QWidget *parent)
     : QWidget(parent)

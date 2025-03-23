@@ -1,5 +1,5 @@
-    #ifndef MINIWINDOW_H
-#define MINIWINDOW_H
+#ifndef CREATE_TASK_H
+#define CREATE_TASK_H
 
 #include <QWidget>
 
@@ -19,4 +19,4 @@ private:
     Ui::MiniWindow *ui;
 };
 
-#endif // MINIWINDOW_H
+#endif // CREATE_TASK_H
