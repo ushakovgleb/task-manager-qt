@@ -9,17 +9,31 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    calendar.cpp \
+    create_task.cpp \
+    for_today.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    plans.cpp \
+    unsorted.cpp
 
 HEADERS += \
-    mainwindow.h
+    calendar.h \
+    create_task.h \
+    for_today.h \
+    mainwindow.h \
+    plans.h \
+    unsorted.h
 
 FORMS += \
-    mainwindow.ui
+    calendar.ui \
+    create_task.ui \
+    for_today.ui \
+    mainwindow.ui \
+    plans.ui \
+    unsorted.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
-

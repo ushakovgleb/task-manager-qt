@@ -6,62 +6,156 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>903</width>
-    <height>660</height>
+    <width>1600</width>
+    <height>900</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(207, 210, 255)
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableView" name="tableView">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>114</x>
-      <y>9</y>
-      <width>781</width>
-      <height>541</height>
+      <x>0</x>
+      <y>50</y>
+      <width>400</width>
+      <height>900</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(207, 210, 255);
+color:black;
+border-color: rgb(207, 210, 255);</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QTableView" name="tableView">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>530</y>
+       <width>191</width>
+       <height>114</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>180</y>
+       <width>400</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(225, 224, 255);
+color:black;
+border-color: rgb(207, 210, 255);</string>
+     </property>
+     <property name="text">
+      <string>Нераспределенные </string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>60</y>
+       <width>400</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(225, 224, 255);
+color:black;
+border-color: rgb(207, 210, 255);</string>
+     </property>
+     <property name="text">
+      <string>На сегодня</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>400</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(225, 224, 255);
+color:black;
+border-color: rgb(207, 210, 255);</string>
+     </property>
+     <property name="text">
+      <string>Планы</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>120</y>
+       <width>400</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(225, 224, 255);
+color:black;
+border-color: rgb(207, 210, 255);</string>
+     </property>
+     <property name="text">
+      <string>Календарь</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>290</y>
+       <width>300</width>
+       <height>43</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Создать новую задачу</string>
+     </property>
+    </widget>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>9</x>
-      <y>9</y>
-      <width>91</width>
-      <height>21</height>
+      <x>420</x>
+      <y>10</y>
+      <width>551</width>
+      <height>38</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black</string>
     </property>
     <property name="text">
-     <string>Добавить задачу</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>91</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Удалить задачу</string>
+     <string>Поиск</string>
     </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>903</width>
-     <height>21</height>
-    </rect>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string notr="true">QStatusBar{
+	background-color: gray;
+}
+</string>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
