@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QtSql/QSqlDatabase>
 #include "create_task.h"
+#include "QSqlError"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -13,17 +14,18 @@ MainWindow::MainWindow(QWidget *parent)
     db.setDatabaseName("./DB.db");
     if(db.open())
     {
-        qDebug("open");
+        qDebug("open db");
     }
     else
     {
-        qDebug("no open");
+        qDebug("no open db");
     }
 
+    //создание БД
     query = new QSqlQuery(db);
     query->exec("CREATE TABLE Tasks(Задачи TEXT);");
 
-    //инициализация модели
+    //инициализация модели бд для задачи
     model = new QSqlTableModel(this, db);
     model->setTable("Tasks");
     model->select();
@@ -44,11 +46,6 @@ MainWindow::MainWindow(QWidget *parent)
 
 }
 
-MainWindow::~MainWindow()
-{
-    delete ui;
-}
-
 void MainWindow::clicked_on_date()
 {
     MiniWindow* miniWindow = new MiniWindow(this);
@@ -65,4 +62,44 @@ void MainWindow::clicked_on_date()
 
     miniWindow->show();
 }
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+
+
+//кнопка для добавления задачи
+void MainWindow::on_pushButton_6_clicked()
+{
+    model->insertRows(model->rowCount(), 1);
+}
+
+//кнопка для удаления задачи
+void MainWindow::on_pushButton_7_clicked()
+{
+    //удаление задачи
+    if (model->removeRow(row)) {
+        //изминение в бд
+        if (model->submitAll()) {
+            //обновление бд
+            model->select();
+        } else {
+            qDebug() << "Ошибка при сохранении изменений:" << model->lastError().text();
+        }
+    } else {
+        qDebug() << "Ошибка при удалении строки!";
+    }
+
+
+}
+//отслеживание выбора стркои пользователем
+void MainWindow::on_tableView_clicked(const QModelIndex &index)
+{
+    row = index.row();
+}
+
+
+
 

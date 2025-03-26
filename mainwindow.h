@@ -24,10 +24,18 @@ public:
 private slots:
     void clicked_on_date();
 
+    void on_pushButton_6_clicked();
+
+    void on_tableView_clicked(const QModelIndex &index);
+
+    void on_pushButton_7_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
     QSqlQuery *query;
     QSqlTableModel *model;
+
+    int row;
 };
 #endif // MAINWINDOW_H
