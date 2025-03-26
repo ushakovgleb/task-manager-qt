@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     query = new QSqlQuery(db);
     query->exec("CREATE TABLE Tasks(Задачи TEXT);");
 
-    //инициализация модели
+    //инициализация модели бд для задачи
     model = new QSqlTableModel(this, db);
     model->setTable("Tasks");
     model->select();
