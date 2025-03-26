@@ -35,16 +35,6 @@ border-color: rgb(207, 210, 255);</string>
     <property name="title">
      <string/>
     </property>
-    <widget class="QTableView" name="tableView">
-     <property name="geometry">
-      <rect>
-       <x>100</x>
-       <y>530</y>
-       <width>191</width>
-       <height>114</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
@@ -130,6 +120,19 @@ border-color: rgb(207, 210, 255);</string>
       <string>Создать новую задачу</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_7">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>340</y>
+       <width>300</width>
+       <height>43</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Удалить задачу</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
@@ -145,6 +148,16 @@ border-color: rgb(207, 210, 255);</string>
     </property>
     <property name="text">
      <string>Поиск</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>60</y>
+      <width>551</width>
+      <height>671</height>
+     </rect>
     </property>
    </widget>
   </widget>
