@@ -141,7 +141,7 @@ border-color: rgb(207, 210, 255);</string>
    <widget class="QLineEdit" name="searchLine">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>440</x>
       <y>10</y>
       <width>551</width>
       <height>38</height>
