@@ -28,14 +28,12 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(207, 210, 255);
-color:black;
-border-color: rgb(207, 210, 255);</string>
+     <string notr="true">background-color: rgb(207, 210, 255);</string>
     </property>
     <property name="title">
      <string/>
     </property>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="unsortedButton">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -53,7 +51,7 @@ border-color: rgb(207, 210, 255);</string>
       <string>Нераспределенные </string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="fortodayButton">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -71,7 +69,7 @@ border-color: rgb(207, 210, 255);</string>
       <string>На сегодня</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="tasksButton">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -86,10 +84,10 @@ color:black;
 border-color: rgb(207, 210, 255);</string>
      </property>
      <property name="text">
-      <string>Планы</string>
+      <string>Задачи</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_4">
+    <widget class="QPushButton" name="calendarButton">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -107,7 +105,7 @@ border-color: rgb(207, 210, 255);</string>
       <string>Календарь</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_6">
+    <widget class="QPushButton" name="createnewtaskButton">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -116,11 +114,14 @@ border-color: rgb(207, 210, 255);</string>
        <height>43</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color:black</string>
+     </property>
      <property name="text">
       <string>Создать новую задачу</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_7">
+    <widget class="QPushButton" name="removetaskButton">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -129,12 +130,15 @@ border-color: rgb(207, 210, 255);</string>
        <height>43</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color:black</string>
+     </property>
      <property name="text">
       <string>Удалить задачу</string>
      </property>
     </widget>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="searchLine">
     <property name="geometry">
      <rect>
       <x>420</x>
@@ -150,15 +154,17 @@ border-color: rgb(207, 210, 255);</string>
      <string>Поиск</string>
     </property>
    </widget>
-   <widget class="QTableView" name="tableView">
+   <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>60</y>
-      <width>551</width>
-      <height>671</height>
+      <x>400</x>
+      <y>50</y>
+      <width>1200</width>
+      <height>815</height>
      </rect>
     </property>
+    <widget class="QWidget" name="page"/>
+    <widget class="QWidget" name="page_2"/>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar">

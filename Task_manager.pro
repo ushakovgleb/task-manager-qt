@@ -9,29 +9,29 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    calendar.cpp \
+    calendarpage.cpp \
     create_task.cpp \
-    for_today.cpp \
+    fortodaypage.cpp \
     main.cpp \
     mainwindow.cpp \
-    plans.cpp \
-    unsorted.cpp
+    taskspage.cpp \
+    unsortedpage.cpp
 
 HEADERS += \
-    calendar.h \
+    calendarpage.h \
     create_task.h \
-    for_today.h \
+    fortodaypage.h \
     mainwindow.h \
-    plans.h \
-    unsorted.h
+    taskspage.h \
+    unsortedpage.h
 
 FORMS += \
-    calendar.ui \
+    calendarpage.ui \
     create_task.ui \
-    for_today.ui \
+    fortodaypage.ui \
     mainwindow.ui \
-    plans.ui \
-    unsorted.ui
+    taskspage.ui \
+    unsortedpage.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

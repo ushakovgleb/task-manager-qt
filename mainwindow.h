@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QSqlQuery>
 #include <QSqlTableModel>
+#include <QWidget>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -24,17 +25,30 @@ public:
 private slots:
     void clicked_on_date();
 
-    void on_pushButton_6_clicked();
+    void on_createnewtaskButton_clicked();
 
     void on_tableView_clicked(const QModelIndex &index);
 
-    void on_pushButton_7_clicked();
+    void on_removetaskButton_clicked();
+
+    void on_tasksButton_clicked();
+
+    void on_fortodayButton_clicked();
+
+    void on_calendarButton_clicked();
+
+    void on_unsortedButton_clicked();
 
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
     QSqlQuery *query;
     QSqlTableModel *model;
+    QWidget *tasksPage;
+    QWidget *fortodayPage;
+    QWidget *calendarPage;
+    QWidget *unsortedPage;
+
 
     int row;
 };

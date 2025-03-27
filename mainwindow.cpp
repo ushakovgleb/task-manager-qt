@@ -1,5 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "ui_TasksPage.h"
+#include "ui_fortodaypage.h"
+#include "ui_calendarpage.h"
+#include "ui_unsortedpage.h"
 #include <QtSql/QSqlDatabase>
 #include "create_task.h"
 #include "QSqlError"
@@ -7,8 +11,28 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+    , tasksPage(new QWidget)
+    , fortodayPage(new QWidget)
+    , calendarPage(new QWidget)
+    , unsortedPage(new QWidget)
 {
     ui->setupUi(this);
+
+    Ui::TasksPage uiTasks;
+    uiTasks.setupUi(tasksPage);
+    Ui::ForTodayPage uiForToday;
+    uiForToday.setupUi(fortodayPage);
+    Ui::CalendarPage uiCalendar;
+    uiCalendar.setupUi(calendarPage);
+    Ui::UnsortedPage uiUnsorted;
+    uiUnsorted.setupUi(unsortedPage);
+
+    ui->stackedWidget->addWidget(tasksPage);
+    ui->stackedWidget->addWidget(fortodayPage);
+    ui->stackedWidget->addWidget(calendarPage);
+    ui->stackedWidget->addWidget(unsortedPage);
+
+    ui->stackedWidget->setCurrentWidget(tasksPage);
 
     db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("./DB.db");
@@ -71,13 +95,13 @@ MainWindow::~MainWindow()
 
 
 //кнопка для добавления задачи
-void MainWindow::on_pushButton_6_clicked()
+void MainWindow::on_createnewtaskButton_clicked()
 {
     model->insertRows(model->rowCount(), 1);
 }
 
 //кнопка для удаления задачи
-void MainWindow::on_pushButton_7_clicked()
+void MainWindow::on_removetaskButton_clicked()
 {
     //удаление задачи
     if (model->removeRow(row)) {
@@ -100,6 +124,28 @@ void MainWindow::on_tableView_clicked(const QModelIndex &index)
     row = index.row();
 }
 
+void MainWindow::on_tasksButton_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(tasksPage);
+}
+
+void MainWindow::on_fortodayButton_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(fortodayPage);
+
+}
 
 
+void MainWindow::on_calendarButton_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(calendarPage);
+
+}
+
+
+void MainWindow::on_unsortedButton_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(unsortedPage);
+
+}
 
