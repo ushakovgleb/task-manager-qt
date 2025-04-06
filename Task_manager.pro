@@ -14,7 +14,6 @@ SOURCES += \
     fortodaypage.cpp \
     main.cpp \
     mainwindow.cpp \
-    taskspage.cpp \
     unsortedpage.cpp
 
 HEADERS += \
@@ -22,7 +21,6 @@ HEADERS += \
     create_task.h \
     fortodaypage.h \
     mainwindow.h \
-    taskspage.h \
     unsortedpage.h
 
 FORMS += \
@@ -30,10 +28,11 @@ FORMS += \
     create_task.ui \
     fortodaypage.ui \
     mainwindow.ui \
-    taskspage.ui \
     unsortedpage.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES +=

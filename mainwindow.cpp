@@ -1,25 +1,24 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "ui_TasksPage.h"
 #include "ui_fortodaypage.h"
 #include "ui_calendarpage.h"
 #include "ui_unsortedpage.h"
 #include <QtSql/QSqlDatabase>
 #include "create_task.h"
 #include "QSqlError"
+#include <QMessageBox>
+#include <QStandardItemModel>
+#include <QSqlQuery>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
-    , tasksPage(new QWidget)
     , fortodayPage(new QWidget)
     , calendarPage(new QWidget)
     , unsortedPage(new QWidget)
 {
     ui->setupUi(this);
 
-    Ui::TasksPage uiTasks;
-    uiTasks.setupUi(tasksPage);
     Ui::ForTodayPage uiForToday;
     uiForToday.setupUi(fortodayPage);
     Ui::CalendarPage uiCalendar;
@@ -27,12 +26,11 @@ MainWindow::MainWindow(QWidget *parent)
     Ui::UnsortedPage uiUnsorted;
     uiUnsorted.setupUi(unsortedPage);
 
-    ui->stackedWidget->addWidget(tasksPage);
     ui->stackedWidget->addWidget(fortodayPage);
     ui->stackedWidget->addWidget(calendarPage);
     ui->stackedWidget->addWidget(unsortedPage);
 
-    ui->stackedWidget->setCurrentWidget(tasksPage);
+    ui->stackedWidget->setCurrentIndex(0);
 
     db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("./DB.db");
@@ -54,6 +52,8 @@ MainWindow::MainWindow(QWidget *parent)
     model->setTable("Tasks");
     model->select();
 
+    connect(ui->tableView, &QTableView::clicked, this, &MainWindow::on_tableView_clicked);
+
     ui->tableView->setModel(model);
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->tableView->setStyleSheet(
@@ -67,6 +67,7 @@ MainWindow::MainWindow(QWidget *parent)
             "    border: 1px solid #dcdcdc;"
             "}"
         );
+
 
 }
 
@@ -99,7 +100,6 @@ void MainWindow::on_createnewtaskButton_clicked()
 {
     model->insertRows(model->rowCount(), 1);
 }
-
 //кнопка для удаления задачи
 void MainWindow::on_removetaskButton_clicked()
 {
@@ -122,6 +122,21 @@ void MainWindow::on_removetaskButton_clicked()
 void MainWindow::on_tableView_clicked(const QModelIndex &index)
 {
     row = index.row();
+
+    if (!index.isValid()) return;
+
+    // Получаем данные из модели
+    int id = model->data(model->index(row, 0)).toInt();
+    QString title = model->data(model->index(row, 1)).toString();
+    QString description = model->data(model->index(row, 2)).toString();
+
+    // Показываем всплывающее окно
+    QMessageBox::information(this,
+                             "Информация о задаче",
+                             QString("ID: %1\nНазвание: %2\nОписание: %3")
+                                 .arg(id)
+                                 .arg(title)
+                                 .arg(description));
 }
 
 void MainWindow::on_tasksButton_clicked()
@@ -148,4 +163,3 @@ void MainWindow::on_unsortedButton_clicked()
     ui->stackedWidget->setCurrentWidget(unsortedPage);
 
 }
-
