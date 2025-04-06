@@ -141,7 +141,7 @@ void MainWindow::on_tableView_clicked(const QModelIndex &index)
 
 void MainWindow::on_tasksButton_clicked()
 {
-    ui->stackedWidget->setCurrentWidget(tasksPage);
+    ui->stackedWidget->setCurrentIndex(0);
 }
 
 void MainWindow::on_fortodayButton_clicked()

@@ -39,8 +39,6 @@ private slots:
 
     void on_unsortedButton_clicked();
 
-    void on_TableView_clicked();
-
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
